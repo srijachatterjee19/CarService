@@ -2,6 +2,7 @@ package com.example.CarService.repository;
 
 import com.example.CarService.domain.Car;
 import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,9 @@ public class CarDAO implements DAO<Car> {
     @Override
     public int save(Car car) {
         carList.add(car);
-        return carList.size();
+        int carId = carList.size();
+        car.setCarId(carId);
+        System.out.println("saved details");
+        return carId;
     }
 }

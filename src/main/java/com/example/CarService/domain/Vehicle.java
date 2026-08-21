@@ -1,10 +1,7 @@
 package com.example.CarService.domain;
 
 public interface Vehicle {
+    public int saveVehicleDetails();
 
-    
-    public Boolean saveVehicleDetails();
-
-    
-    public void createVehicle(String RegistrationNumber,String CarName,String CarDetails ,String WorkDone);
+    public void createVehicle(String RegistrationNumber, String CarName, String CarDetails, String WorkDone);
 }
